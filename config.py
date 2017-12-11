@@ -11,7 +11,7 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     BCRYPT_LOG_ROUNDS = 15
-    MAIL_SERVER = 'smtp.mandrillapp.com'
+    MAIL_SERVER = 'smtp.sendgrid.net'
     MAIL_PORT = 587
     MAIL_USE_TLS = False
     MAIL_USE_SSL = False
