@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+
+		<title>Home User</title>
+
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style-homeuser.css">
+		<script type="text/javascript" src="script-homeuser.js"></script>
+
+	</head>
+
+	<body>
+		<header>
+			<div id="header_top" style="background-color: rgba(255,255,255,0.8);">
+					<!--FIXED NAVBAR-->
+					<nav class="container">
+						<div class="row">
+							<div class="col-sm-2"> 
+								<h1 id="logo">	
+									<img src="images/iconkalikesia.png">
+								</h1>
+							</div>
+							<div class="col-sm-9">
+								<div id="navbar" class="collapse navbar-collapse">
+									<ul class="nav navbar-nav">
+					                  <li class="active"><a href="#" style="font-size: 20px; color: #0073e6;">Tentang Kami</a></li>
+					                  <li ><a href="#about" style="font-size: 20px; color: #0073e6;">Kontak</a></li>
+					                  <li ><a href="#contact" style="font-size: 20px; color: #0073e6;">Blog</a></li>
+				              		</ul>
+								</div>
+							</div>
+
+							<!-- Login Button dan Daftar Kalikesia Button-->
+							<div class="col-sm-1"> 
+								<div id="navbar">
+									
+								</div>
+								<div id="navbar">
+									<button id="button-profile" style="background: url(images/profilenew.png);"></button>
+								</div>
+							</div>
+						</div>
+					</nav>
+			</div>
+		</header>
+
+		<div id="container" style="background-color: #eee;">
+				<div class="row">
+					<!--CLASS MATERIAL CONTAINER-->
+					<div class="col-md-3">
+						<div class="vertical-menu" id="menu-leftside">
+						  <a href="#" class="active">Perawat (Opening)</a>
+						  <a href="#">Tentang Infus</a>
+						  <a href="#">Tentang Perban</a>
+						  <a href="#">Tentang Obat</a>
+						  <a href="#">Tentang Suntikan</a>
+						</div>
+					</div>
+
+					<!--VIDEO CONTAINER-->
+					<div class="col-md-9" id="videoplayer">
+						<div class="row">
+							<p class="class-section"><a href="#">Perawat</a> - <a href="#">Perawat (Opening) </a></p>
+						</div>
+						<div class="row">
+							<video id="frag1" controls preload="metadata" controls poster="video-poster.jpg">
+								<source src="videos/vid1.mp4" type="video/mp4" data-original="videos/vid1.mp4">
+							</video>
+							<nav>
+							    <button data-start="0">Section One</button>
+							    <button data-start="6">Section Two</button>
+							    <button data-start="17">Section Three</button>
+							</nav>
+							<p>
+								Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+							</p>
+							<button type="button" class="btn btn-info center-block" style="padding: 20px 30px; background-color: #0073e6; color: white;">Ambil Tes Sertifikasi</button>
+						</div>
+						<div class="padding-bottom"></div> <!--Padding Bottom-->
+					</div>
+				</div>
+		</div>
+
+
+
+		<!--FOOTER-->
+		<footer class="footer">
+	        <div class="container" style="background-color: lightgrey; width: 100%; height: inherit;">
+	          <p class="text-muted">&copy; 2017 Kalikesia.</p>
+	        </div>
+	    </footer>
+
+
+		<!-- Bootstrap core JavaScript
+	    ================================================== -->
+	    <!-- Placed at the end of the document so the pages load faster -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	    <script>window.jQuery || document.write('<script src="static/js/jquery=3.2.1.js"><\/script>')</script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	    <script src="static/js/ie10-viewport-bug-workaround.js"></script>	
+
+	</body>
+
+</html>
