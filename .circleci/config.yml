@@ -49,6 +49,6 @@ jobs:
       - store_artifacts:
           path: test-reports
           destination: test-reports
-      environment:
-      - APP_SETTINGS: "config.DevelopmentConfig"
+      - environment:
+          APP_SETTINGS: "config.TestingConfig"
           

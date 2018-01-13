@@ -7,4 +7,4 @@ install:
 script:
   - python manage.py test
 env:
-  - APP_SETTINGS="config.DevelopmentConfig"
+  - APP_SETTINGS="config.TestingConfig"
