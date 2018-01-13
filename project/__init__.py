@@ -31,13 +31,20 @@ def load_user(user_id):
 # BLUEPRINTS
 from project.users.views import users_blueprint
 from project.items.views import items_blueprint
+from project.seminars.views import seminars_blueprint
 
 app.register_blueprint(users_blueprint)
 app.register_blueprint(items_blueprint)
+app.register_blueprint(seminars_blueprint)
 
 
 # ROUTES
 @app.route('/', methods=['GET', 'POST'])
+def index():
+	return render_template('index.html')
+
+	
+@app.route('/home', methods=['GET', 'POST'])
 @login_required
 def home():
     """Render homepage"""

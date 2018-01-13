@@ -1,0 +1,143 @@
+
+
+#homepage_columns_header {
+	background-color: white;
+	height: 100px; width: inherit; 
+	display: block;
+}
+
+#mySidenav a {
+    position: absolute; /* Position them relative to the browser window */
+    left: -80px; /* Position them outside of the screen */
+    transition: 0.3s; /* Add transition on hover */
+    padding: 15px; /* 15px padding */
+    width: 120px; /* Set a specific width */
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Increase font size */
+    color: white; /* White text color */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#mySidenav a:hover {
+    left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#blog {
+    top: 20px;
+    background-color: #4CAF50;
+}
+
+#facebook {
+    top: 80px;
+    background-color: #2196F3; /* Blue */
+}
+
+#googleplus {
+    top: 140px;
+    background-color: #f44336; /* Red */
+}
+
+#contact {
+    top: 200px;
+    background-color: #555 /* Light Black */
+}
+
+h1.indexfont {
+	color: black;
+	position: center;
+	padding-top: 10px;
+}
+
+.carousel-inner {
+	height: 300px;
+	width: inherit;
+	background-color: #66ffcc;
+	font-family: Verdana;
+}
+
+.carousel-control {
+	opacity: 0;
+}
+
+#carousel-caption {
+	font-size: 20px;
+	font-family: Verdana;
+	color: black;
+	margin-top: 20px;
+	margin-left: 370px;
+}
+
+/* Belongs to Homeuser and seminar page */
+video { 
+	width: 400px; 
+	min-height: 300px; 
+	background: transparent url('images/video-poster.jpg') no-repeat 0 0;
+	background-size: cover;
+	}
+button { cursor: pointer; }
+nav>button { margin: 0.27em; }
+nav>button:first-child { margin-left: 0; }
+
+#navbar {
+	padding-top: 10px;
+	padding-right: 600px;
+}
+
+.bouton-image:before {
+			    content: "";
+			    width: inherit;
+			    height: inherit;
+			    margin-right: 10px;
+			    background-color: white;
+			    background-position : center center;
+			    background-repeat:no-repeat;
+			}
+
+.monBouton:before{
+			     background-image : url(images/profilenew.png);
+			}
+
+.container {
+	width: 100%;
+}
+
+#videoplayer {
+	padding: 60px;
+	background-color: lightblue;
+}
+
+#frag1 {
+	width: 750px;
+	height: 500px;
+}
+
+.longposter { height: inherit; width: inherit; position: center; }
+		
+/* Belongs to seminar.html */
+.vertical-menu {
+    width: 300px; /* Set a width if you like */
+}
+
+#menu-leftside {
+	height: inherit;
+}
+
+.vertical-menu a {
+    background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.vertical-menu a.active {
+    background-color: #4CAF50; /* Add a green color to the "active/current" link */
+    color: white;
+}
+
+

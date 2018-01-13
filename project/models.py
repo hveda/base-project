@@ -6,6 +6,8 @@ from datetime import datetime
 class User(db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    firstname = db.Column(db.String, nullable=False)
+    lastname = db.Column(db.String)
     email = db.Column(db.String, unique=True, nullable=False)
     _password = db.Column(db.Binary(60), nullable=False)
     authenticated = db.Column(db.Boolean, default=False)
@@ -19,6 +21,8 @@ class User(db.Model):
     items = db.relationship('Items', backref='user', lazy='dynamic')
 
     def __init__(self, email, password, email_confirmation_sent_on=None, role='user'):
+        self.firstname = firstname
+        self.lastname = lastname
         self.email = email
         self.password = password
         self.authenticated = False
@@ -68,7 +72,7 @@ class User(db.Model):
         return str(self.id)
 
     def __repr__(self):
-        return '<User {}>'.format(self.email)
+        return '<{} {}>'.format(self.firstname, self.email)
 
 
 class Items(db.Model):

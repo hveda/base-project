@@ -11,10 +11,10 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     BCRYPT_LOG_ROUNDS = 15
-    MAIL_SERVER = 'smtp.sendgrid.net'
+    MAIL_SERVER = 'smtp.gmail.com'
     MAIL_PORT = 587
-    MAIL_USE_TLS = False
     MAIL_USE_SSL = False
+    MAIL_USE_TLS = True
     MAIL_USERNAME = os.environ['MAIL_USERNAME']
     MAIL_PASSWORD = os.environ['MAIL_PASSWORD']
     MAIL_DEFAULT_SENDER = 'hvedaid@gmail.com'

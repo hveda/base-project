@@ -1,0 +1,111 @@
+{% extends "_base.html" %}
+{% block title %}KALIKESIA - Semangat membangun negeri!{% endblock %}
+{% block content %}
+        <!--Background Image Header-->
+        <div id="doctor_visual_copy" style="background-color: transparent; background: url(images/twodoctors.jpg) no-repeat center center fixed; height: 600px; -webkit-background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; padding: 0; margin: 0; background-size: 100%; " >
+            <div id="header_top" style="background-color: rgba(225,225,208,0.8);">
+
+            </div>
+            <div class="row">   
+                <div class="col-lg-6">
+                    <div id="mySidenav" class="sidenav">
+                      <a href="#" id="blog">Blog</a>
+                      <a href="#" id="facebook">Facebook</a>
+                      <a href="#" id="googleplus">Google+</a>
+                      <a href="#" id="contact">Email</a>
+                    </div>
+                </div>
+                <!--Opening Speech on Image-->
+                <div class="col-lg-5">
+                    <h1 style="font-size: 35px; color:white; font-style: bold;">
+                        <font face="Arial"> Kalikesia membantu tenaga medis untuk mengasah ilmu pengetahuan </font>
+                    </h1>
+                    <br>
+                    <br>
+                    <p style=" font-size: 20px; color:white;">
+                        <font face="Arial"> Kalikesia bertujuan memberikan akses pengetahuan yang mudah bagi tenaga medis di Indonesia </font>
+                    <br>
+                    <br>
+                        <font face="Arial"> Di kalikesia anda dapat mengikuti seminar dan pembelajaran online mengenai kesehatan </font>
+                    <br>
+                    <br>
+                        <font face="Arial"> Untuk itu mari bergabung ke Kalikesia! </font>
+                    </p>
+                    <button type="button" class="btn btn-join" style="padding: 20px 30px; background-color: #141452; color: white;">Daftar Seminar SKP</button>
+                </div>
+            </div>
+        </div>
+
+        <!--CAROUSEL Section-->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+
+
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <h2><center>Mengapa Kalikesia?</center></h2>
+            <div class="item active" id="carousel-caption">
+                <p>"Kalikesia memberikan pengalaman berharga bagi kami."</p>
+            </div>
+
+            <div class="item" id="carousel-caption">
+                <p>"Kalikesia adalah sarana terbaik untuk mengasah kemampuan kami."</p>
+            </div>
+
+            <div class="item" id="carousel-caption">
+                <p>"Kalikesia menjadi jembatan kami untuk dapat mengabdi dengan sepenuh hati."</p>
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a> 
+        </div>
+        <!-- END OF CAROUSEL-->
+
+        <!--Homepage Column Join Buttons-->
+        <div id="homepage_columns_header">
+                <h1 class="indexfont">
+                    <center> Mari bergabung menjadi anggota <b>Kalikesia</b>! </center>
+                </h1>
+        </div>
+        <!--Button Join for Every User-->
+        <section id="homepage_columns">
+            <div class="row" style="width: 100%; height: inherit;">
+                    <div class="col-sm-4">
+                        <button type="button" class="btn btn-outline-dokter btn-lg" style="background-color: #009999; border: none; padding: 90px 195px; text-align: center; font-size: 40px; border-radius: 0px; display: block;">Dokter</button>
+                    </div>
+                    <div class="col-sm-4">
+                        <button type="button" class="btn btn-outline-perawat btn-lg" style="background-color: lightblue; border: none; padding: 90px 190px; text-align: center; font-size: 40px; border-radius: 0px; display: block;" >Perawat</button>
+                    </div>
+                    <div class="col-sm-4">
+                        <button type="button" class="btn btn-outline-doktergigi btn-lg" style="background-color: #ff9999; border: none; padding: 90px 125px; text-align: center; font-size: 40px; border-radius: 0px; display: block;">Dokter Gigi</button>
+                    </div>
+                </div>
+                <div class="row" style="width: 100%; height: inherit;">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4">
+                        <button type="button" class="btn btn-outline-apoteker btn-lg" style="background-color: #adad85; border: none; padding: 90px 180px; text-align: center; font-size: 40px; border-radius: 0px; display: block;" >Apoteker</button>
+                    </div>
+                    <div class="col-sm-4">
+                        <button type="button" class="btn btn-outline-bidan btn-lg" style="background-color: #a3a3c2; border: none; padding: 90px 180px; text-align: center; font-size: 40px; border-radius: 0px; display: block;" >Bidan</button>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+        </section>
+        <div class="padding_bottom" style="padding: 20px;"></div>
+
+{% endblock content %}
+<!--FOOTER-->
