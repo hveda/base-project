@@ -6,7 +6,8 @@ Move home (login required page)
 edit Seminar view (routes)
 watch_seminar.html
 
-
+python manage.py db migrate
+python manage.py db upgrade
 
 
 "Deatch March"

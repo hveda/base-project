@@ -6,7 +6,7 @@ from datetime import datetime
 class User(db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    firstname = db.Column(db.String, nullable=False)
+    firstname = db.Column(db.String)
     lastname = db.Column(db.String)
     email = db.Column(db.String, unique=True, nullable=False)
     _password = db.Column(db.Binary(60), nullable=False)
@@ -20,7 +20,7 @@ class User(db.Model):
     role = db.Column(db.String, default='user')
     items = db.relationship('Items', backref='user', lazy='dynamic')
 
-    def __init__(self, email, password, email_confirmation_sent_on=None, role='user'):
+    def __init__(self, firstname, lastname, email, password, email_confirmation_sent_on=None, role='user'):
         self.firstname = firstname
         self.lastname = lastname
         self.email = email
