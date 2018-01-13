@@ -36,7 +36,3 @@ class DevelopmentConfig(Config):
 
 class TestingConfig(Config):
     TESTING = True
-    SECRET_KEY = "secret-key"
-    DATABASE_URL = "sqlite:///db.sqlite"
-    MAIL_USERNAME = "noreply@localhost"
-    MAIL_PASSWORD = "mail-password"

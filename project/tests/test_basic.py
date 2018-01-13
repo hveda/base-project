@@ -11,6 +11,9 @@ class BasicTests(unittest.TestCase):
         app.config['WTF_CSRF_ENABLED'] = False
         app.config['DEBUG'] = False
         app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/test'
+        app.config['SECRET_KEY'] = 'secret-key'
+        app.config['MAIL_USERNAME'] = 'noreply@localhost'
+        app.config['MAIL_PASSWORD'] = 'mail-password'
         self.app = app.test_client()
         db.drop_all()
         db.create_all()
@@ -48,7 +51,9 @@ class BasicTests(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_valid_user_registration(self):
-        response = self.register('test11@test11.com',
+        response = self.register('test',
+                                 'user',
+                                 'test11@test11.com',
                                  'PasswIsGood13#$',
                                  'PasswIsGood13#$')
         self.assertEqual(response.status_code, 200)
