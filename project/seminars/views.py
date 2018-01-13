@@ -13,17 +13,29 @@ seminars_blueprint = Blueprint('seminars', __name__, template_folder='templates'
 
 
 # ROUTES
-@seminars_blueprint.route('/all_items', methods=['GET', 'POST'])
+@seminars_blueprint.route('/all_seminars', methods=['GET', 'POST'])
 @login_required
-def all_items():
+def all_seminars():
     """Render homepage"""
-    all_user_items = Items.query.filter_by(user_id=current_user.id)
-    return render_template('all_items.html', items=all_user_items)
+    all_seminars = Seminars.query.fetchall()
+    return render_template('all_seminar.html', items=all_user_seminars)
 
 
-@seminars_blueprint.route('/add_item', methods=['GET', 'POST'])
+@seminars_blueprint.route('/<seminars_id>')
 @login_required
-def add_item():
+def watch_seminar():
+    return render_template('watch_seminar.html')
+
+
+@seminars_blueprint.route('/<seminars_id>/question')
+@login_required
+def question_seminar():
+    return render_template('question_seminar.html', form=form)
+
+
+@seminars_blueprint.route('/add_seminar', methods=['GET', 'POST'])
+@login_required
+def add_seminar():
     form = ItemsForm(request.form)
     if request.method == 'POST':
         if form.validate_on_submit():
@@ -44,9 +56,9 @@ def add_item():
     return render_template('add_item.html', form=form)
 
 
-@seminars_blueprint.route('/edit_item/<seminars_id>', methods=['GET', 'POST'])
+@seminars_blueprint.route('/edit_seminar/<seminars_id>', methods=['GET', 'POST'])
 @login_required
-def edit_item(seminars_id):
+def edit_seminar(seminars_id):
     form = EditItemsForm(request.form)
     item_with_user = db.session.query(Items, User).join(User).filter(Items.id == seminars_id).first()
     if item_with_user is not None:
@@ -76,9 +88,10 @@ def edit_item(seminars_id):
         flash(message, 'danger')
     return redirect(url_for('home'))
 
-@seminars_blueprint.route('/delete_item/<seminars_id>', methods=['GET', 'POST'])
+
+@seminars_blueprint.route('/delete_seminar/<seminars_id>', methods=['GET', 'POST'])
 @login_required
-def delete_item(seminars_id):
+def delete_seminar(seminars_id):
     item_with_user = db.session.query(Items, User).join(User).filter(Items.id == seminars_id).first()
     if item_with_user is not None:
         items = Items.query.filter_by(id=seminars_id)
