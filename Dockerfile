@@ -2,10 +2,13 @@ FROM python:3.6.3
 
 MAINTAINER Heri Rusmanto "hvedaid@gmail.com"
 
-RUN mkdir -p /var/www/kalikesia
-WORKDIR /var/www/kalikesia
+# Set working directory
+RUN mkdir -p /code
+WORKDIR /code
 
-ADD requirements.txt /var/www/kalikesia
+# Add requirements (to leverage Docker cache)
+ADD ./requirements.txt /code/requirements.txt
+# install requirements
 RUN pip install -r requirements.txt
 
-ADD . /var/www/kalikesia
+ADD . /code

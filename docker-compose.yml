@@ -1,29 +1,23 @@
-version: "2"
+version: '2'
+
 services:
-  app:
+
+  web:
     build: .
-    command: python -m flask run --host 0.0.0.0 --port 5000
+    image: web
+    container_name: kalikesia
     environment:
-      - FLASK_APP=serve.py
+      - FLASK_APP=manage.py
       - FLASK_DEBUG=True
+      - APP_SETTINGS=config.DevelopmentConfig
+      - SECRET_KEY=secret-key
+      - DATABASE_URL=sqlite:///db.sqlite
+      - MAIL_USERNAME=noreply@domain.com
+      - MAIL_PASSWORD=mailpass
+    command: python -m flask run --host 0.0.0.0 --port 5000
     ports:
-      - "5000:5000"
+      - '5000:5000'
+    # expose:
+    #   - '5000'
     volumes:
-      - .:/var/www/flask-bones
-  worker:
-    build: .
-    command: python -m flask rq worker
-    environment:
-      - FLASK_APP=serve.py
-    volumes:
-      - .:/var/www/flask-bones
-  mail:
-    image: "mailhog/mailhog"
-    ports:
-      - "8025:8025"
-  memcached:
-    image: "memcached:alpine"
-  postgres:
-    image: "postgres:alpine"
-  redis:
-    image: "redis:alpine"
+      - .:/code
