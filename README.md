@@ -1,6 +1,5 @@
-[![CircleCI](https://circleci.com/gh/:hveda/:repo.svg?style=shield&circle-token=:d553097467cdee9e11990116920decdc9857af8d)](https://circleci.com/gh/hveda/base-project)
 
-# Flask App Blueprint: the fast way to start your MVP
+# Flask App Blueprint: the fast way to start your MVP [![CircleCI Build Status](https://circleci.com/gh/hveda/base-project.svg?style=shield)](https://circleci.com/gh/hveda/base-project)
 Flask App Blueprint will help you get started with an easy to learn, yet powerful technology stack. A stack that you can have up and running in less than 25 minutes, so you can focus on making the real thing. Including registration, login, insert and retrieve info from a database, and have it all deployed on Heroku.
 
 Created by [@jelmerdejong](https://twitter.com/jelmerdejong).
