@@ -10,7 +10,7 @@ jobs:
         environment:
           APP_SETTINGS: config.TestingConfig
           SECRET_KEY: secret_key
-          # FLASK_CONFIG: testing
+          FLASK_CONFIG: testing
           TEST_DATABASE_URL: postgresql://circleci@localhost/test?sslmode=disable
       - image: circleci/postgres:9.6.5-alpine-ram
         environment:
